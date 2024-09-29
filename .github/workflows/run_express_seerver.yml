@@ -1,0 +1,18 @@
+name: Run express server
+on: workflow_dispatch
+jobs:
+    Get-code-and-run:
+        runs-on: ubuntu-latest
+        env:
+            PORT: 3001
+        steps:
+            - name: Install node
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+            - name: Get code
+              uses: actions/checkout@v4
+            - name: Install dependencies
+              run: npm ci
+            - name: Run server
+              run: node index.js
