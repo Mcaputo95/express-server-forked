@@ -3,6 +3,7 @@ on: workflow_dispatch
 jobs:
     Get-code-and-run:
         runs-on: ubuntu-latest
+        timeout-minutes: 1
         steps:
             - name: Install node
               uses: actions/setup-node@v4
