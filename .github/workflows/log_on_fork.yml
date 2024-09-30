@@ -6,4 +6,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Create log file
-              run: echo "Someone forked the repo - $(date)"
+              run: echo "Someone forked the repo - $(date)" > log.md
+            - name: Upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: fork_log
+                path: log.md
