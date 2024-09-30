@@ -15,6 +15,6 @@ jobs:
               run: npm ci
             - name: Run server
               env:
-                PORT: 3001
+                PORT: ${{ secrets.PORT }}
               run: node index.js
               
