@@ -6,9 +6,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Create log file
-              run: echo "Someone forked the repo - $(date)" > log.md
+              run: echo "${{ toJson(github.event.forkee) }} forked the repo - $(date)" > log.txt
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
                 name: fork_log
-                path: log.md
+                path: log.txt
