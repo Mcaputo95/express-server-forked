@@ -1,6 +1,6 @@
 name: Log on fork
 on:
-    push:
+    fork:
 jobs:
     Create-log-file:
         runs-on: ubuntu-latest
