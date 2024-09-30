@@ -1,0 +1,9 @@
+name: Log on fork
+on:
+    push:
+jobs:
+    Create-log-file:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Create log file
+              run: echo "Someone forked the repo - $(date)"
