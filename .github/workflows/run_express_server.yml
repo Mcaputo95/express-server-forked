@@ -2,6 +2,7 @@ name: Run express server
 on: workflow_dispatch
 jobs:
     Get-code-and-run:
+        environment: Development
         runs-on: ubuntu-latest
         timeout-minutes: 1
         steps:
